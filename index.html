@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="container">
+
+        <h1 class="text-center txtlogo">Create your own questionnaire</h1>
+
+        <div class="main-buttons">
+            <div id="button-container">
+                <div id="button" class="yellow btnNewQuest">
+                    <p>New questionary</p>
+                </div>
+            </div>
+
+            <div id="button-container">
+                <div id="button" class="green btnInProgress">
+                    <p>In progress</p>
+                </div>
+            </div>
+
+            <div id="button-container">
+                <div id="button" class="blue btnHistory">
+                    <p>History</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="inputsPossition">
+            <form class="form-style-4" method="post">
+                <label for="field1">
+                    <span>Enter questionary name</span>
+                    <input class="questionnaireName" type="text" name="field1" required="true" />
+                </label>
+                <label for="field1">
+                    <span>Duration time</span>
+                    <input class="questionnaireTime" type="text" name="field1" required="true" />
+                </label>
+                <label for="field2">
+                    <span>Your question</span>
+                    <input class="questionnaireQuestion" type="text" name="field2" required="true" />
+                </label>
+                <label for="field3">
+                    <span>Answer</span>
+                    <input class="questionnaireAnswer0" type="text" name="field3" required="true" />
+                </label>
+                <div class="answerContent">
+                    <span class="newAnswer"></span></div>
+                <label class="createQuestionnaire">
+                    <span>&nbsp;</span>
+                    <input type="button" value="Create questionnaire" />
+                </label>
+                <label class="addAnserButton">
+                    <span>&nbsp;</span>
+                    <input type="button" value="Add Answer" />
+                </label>
+            </form>
+        </div>
+
+        <div class="history">
+            <div class="box">
+                <div class="container-1">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Type number of questionnaire..." />
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Name</th>
+                        <th>Date&Duration</th>
+                        <th>Question</th>
+                    </tr>
+                </thead>
+                <tbody class="theadClass">
+                </tbody>
+            </table>
+
+            <table class="searchHide">
+                <thead>
+                    <tr>
+                        <th>Answer number</th>
+                        <th>Answer</th>
+                        <th>Votes</th>
+                        <th>Precent</th>
+                    </tr>
+                </thead>
+                <tbody class="searchResult">
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <script src="JS\jQuery.js"></script>
+    <script src="JS\javaScript.js"></script>
+
+</body>
+
+</html>
