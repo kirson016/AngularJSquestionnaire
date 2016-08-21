@@ -190,9 +190,6 @@ html, body {
     margin-left: -225px;
     top: 20%;
 }
-.addAnserButton {
-    margin-top: -50px;
-}
 .history {
     visibility: hidden;
     left: 50%;
@@ -200,8 +197,17 @@ html, body {
     top: 50%;
     margin-top: -100px;
 }
-.searchHide{
-visibility: hidden;
+.searchHide {
+    visibility: hidden;
+}
+.createQuestionnaire {
+    margin-left: -160px;
+}
+.createQuestion {
+    margin-left: -160px;
+}
+.addAnserButton {
+    margin-left: -160px;
 }
 
 /*TABLE*/
