@@ -14,31 +14,39 @@
 
         <option-buttons></option-buttons>
 
-        <inputs-System></inputs-system>
+        <inputs-System ng-show="tab.questionnaire"></inputs-system>
 
-        <table class="searchHide">
+        <table class="searchHide" ng-show="tab.history">
             <thead>
                 <tr>
                     <th>Answer number</th>
                     <th>Answer</th>
                     <th>Votes</th>
                     <th>Precent</th>
-                </tr>
             </thead>
-            <tbody class="searchResult">
+
+            <tbody class="searchResult procedures">
+                <tr>
+                    <td><strong> asdasdasdasda <td><strong> asdasdasdasdasdasd</strong></td>
+                    <td>hahhahaha'</td>
+                    <td>asdasdasdas</td>
+                </tr>
+                <tr>
+                    <td><strong> asdasdasdasda <td><strong> asdasdasdasdasdasd</strong></td>
+                    <td>hahhahaha'</td>
+                    <td>asdasdasdas</td>
+                </tr>
+                <tr>
+                    <td><strong> asdasdasdasda <td><strong> asdasdasdasdasdasd</strong></td>
+                    <td>hahhahaha'</td>
+                    <td>asdasdasdas</td>
+                </tr>
             </tbody>
         </table>
-
     </div>
-    </div>
-
-    </div>
-    </div>
-
-
 
     <script src="angular/jQuery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="angular/angular.js"></script>
     <script src="js/app.js"></script>
 </body>

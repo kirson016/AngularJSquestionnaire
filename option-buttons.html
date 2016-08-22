@@ -1,19 +1,20 @@
 <div class="main-buttons">
     <div id="button-container">
-        <div id="button" class="yellow btnNewQuest">
+        <div id="button" class="yellow btnNewQuest" ng-click="tab.isSelected('newQuestionary')">
             <p>New questionary</p>
         </div>
     </div>
 
     <div id="button-container">
-        <div id="button" class="green btnInProgress">
+        <div id="button" class="green btnInProgress" ng-click="tab.isSelected()">
             <p>In progress</p>
         </div>
     </div>
 
     <div id="button-container">
-        <div id="button" class="blue btnHistory">
+        <div id="button" class="blue btnHistory" ng-click="tab.isSelected('history')">
             <p>History </p>
         </div>
     </div>
+
 </div>
