@@ -1,19 +1,5 @@
 (function() {
-    var app = angular.module('store', []);
-
-    app.controller('personCtrl', function($scope) {
-        $scope.firstName = "John",
-            $scope.lastName = "Doe"
-        $scope.myVar = false;
-        $scope.myVarr = false;
-        $scope.myVarrr = false;
-        $scope.toggle = function() {
-            $scope.myVar = !$scope.myVar;
-            $scope.myVarr = !$scope.myVarr;
-            $scope.myVarrr = !$scope.myVarrr;
-        };
-    });
-
+    var app = angular.module('store', [])
 
     app.directive('optionButtons', function() {
         return {
@@ -30,14 +16,20 @@
                         this.questionnaire = false;
                         this.inProgress = false;
                     } else if (clicked === 'newQuestionary') {
-                      this.history = false;
-                      this.questionnaire = true;
-                      this.inProgress = false;
+                        this.history = false;
+                        this.questionnaire = true;
+                        this.inProgress = false;
                     } else {
-                      this.history = false;
-                      this.questionnaire = false;
-                      this.inProgress = true;
+                        this.history = false;
+                        this.questionnaire = false;
+                        this.inProgress = true;
                     }
+                };
+
+                this.x = function() {
+                    $http.post('http://localhost:8888/questionnaires', '{"name":"TEST22222222","date":"2016-08-18T22:22:00"}').success(function() {
+                        alert("ok!");
+                    });
                 };
 
 
@@ -50,8 +42,30 @@
         return {
             restrict: 'E',
             templateUrl: 'inputs-system.html',
-            controller: function() {
-                this.inpSys = gem;
+            controller: function($scope, $http) {
+
+                $scope.asd = new Array;
+                $scope.master = {};
+
+                $scope.update = function(user) {
+                    $scope.master = angular.copy(user);
+                    $http.post("http://localhost:8888/questionnaires", {
+                        name: user.name,
+                        date: "2016-08-18T22:22:00"
+                    });
+                    user.name = null;
+                };
+
+                $scope.get = function() {
+                    $http.get("http://localhost:8888/questionnaires")
+                        .then(function(response) {
+                            $scope.asd = response.data;
+                            $scope.xxx = angular.fromJson($scope.asd);
+                            $scope.zzz = angular.fromJson($scope.asd._embedded.questionnaires[0]);
+                            // alert($scope.zzz.length);
+                             alert($scope.zzz.name);
+                        });
+                };
             },
             controllerAs: 'inputs'
         };

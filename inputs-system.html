@@ -1,34 +1,34 @@
-<div  class="inputsPossition">
-    <form class="form-style-4" method="post">
+<div class="inputsPossition">
+    <form name="updateForm" novalidate ng-submit="updateForm.$valid && update(user)" class="form-style-4 css-form">
         <label for="field1">
             <span>Enter questionary name</span>
-            <input class="questionnaireName" type="text" name="field1" required="true" />
+            <input class="questionnaireName" type="text" name="field1" ng-model="user.name" required />
         </label>
         <label for="field1">
             <span>Duration time</span>
-            <input class="questionnaireTime" type="text" name="field1" required="true" />
+            <input class="questionnaireTime" type="text" name="field1" ng-model="user.time" />
         </label>
         <label for="field2">
             <span>Your question</span>
-            <input class="questionnaireQuestion" type="text" name="field2" required="true" />
+            <input class="questionnaireQuestion" type="text" name="field2" ng-model="user.question" />
         </label>
         <label for="field3">
-            <span>inputs.name</span>
-            <input class="questionnaireAnswer0" type="text" name="field3" required="true" />
+            <span>Answer</span>
+            <input class="questionnaireAnswer0" type="text" name="field3" ng-model="user.answer" />
         </label>
         <div class="answerContent">
             <span class="newAnswer"></span></div>
         <label class="addAnserButton">
             <span>&nbsp;</span>
-            <input type="button" value="Add Answer" />
+            <input type="button" value="Add Answer" ng-click="x()" />
         </label>
         <label class="createQuestion">
             <span>&nbsp;</span>
-            <input type="button" value="Create question" />
+            <input type="button" value="Create question" ng-click="get()" />
         </label>
         <label class="createQuestionnaire">
             <span>&nbsp;</span>
-            <input type="button" value="Create questionnaire" />
+            <input type="submit" value="Create questionnaire" />
         </label>
     </form>
 </div>

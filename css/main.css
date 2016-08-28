@@ -1,3 +1,12 @@
+.css-form input.ng-invalid.ng-dirty{
+  background-color: #FA787E;
+  border:1px;
+}
+
+.css-form input.ng-valid.ng.dirty {
+  background-color: #78FA89;
+}
+
 html, body {
     padding: 0;
     margin: 0;
