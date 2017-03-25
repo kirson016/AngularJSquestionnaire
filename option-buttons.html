@@ -1,20 +1,21 @@
-<div class="main-buttons">
-    <div id="button-container">
-        <div id="button" class="yellow btnNewQuest" ng-click="tab.isSelected('newQuestionary')">
-            <p>{New questionary</p>
+<div class="just-padding">
+    <div ng-repeat="mainObject in ngModelData" class="list-group list-group-root well">
+        <div class="row">
+            <div class="col-lg-10">
+                <a href="#" class="list-group-item">{{mainObject.name}}</a>
+            </div>
+            <div class="col-lg-2">
+                <div class="centerBtn">
+                    <button ng-click="callEdit(mainObject.id)" class="btn-edit btn btn-primary">edit</button>
+                    <button ng-click="delete(mainObject.id)" class="btn-edit btn btn-primary">delete</button>
+                </div>
+            </div>
+        </div>
+        <div ng-repeat="questionsObject in mainObject.questions" class="list-group">
+            <a href="#" class="btn-color list-group-item">{{questionsObject.text}}</a>
+            <div class="list-group">
+                <a ng-repeat="answerObject in questionsObject.answers" href="#" class="list-group-item">{{answerObject.text}}</a>
+            </div>
         </div>
     </div>
-
-    <div id="button-container">
-        <div id="button" class="green btnInProgress" ng-click="tab.isSelected()">
-            <p>In progress</p>
-        </div>
-    </div>
-
-    <div id="button-container">
-        <div id="button" class="blue btnHistory" ng-click="tab.isSelected('history')">
-            <p>History </p>
-        </div>
-    </div>
-
 </div>

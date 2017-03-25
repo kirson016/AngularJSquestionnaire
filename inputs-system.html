@@ -1,55 +1,55 @@
-<div class="inputsPossition">
-    <form name="updateForm" novalidate ng-submit="updateForm.$valid && update(user)" class="form-style-4 css-form">
-        <label for="field1">
-            <span>Enter questionary name</span>
-            <input class="questionnaireName" type="text" name="field1" ng-model="user.name" required />
-        </label>
-        <label for="field1">
-            <span>Duration time</span>
-            <input class="questionnaireTime" type="text" name="field1" ng-model="user.time" />
-        </label>
-        <label for="field2">
-            <span>Your question</span>
-            <input class="questionnaireQuestion" type="text" name="field2" ng-model="user.question" />
-        </label>
-        <label for="field3">
-            <span>Answer</span>
-            <input class="questionnaireAnswer0" type="text" name="field3" ng-model="user.answer" />
-        </label>
-        <div class="answerContent">
-            <span class="newAnswer"></span></div>
-        <label class="addAnserButton">
-            <span>&nbsp;</span>
-            <input type="button" value="Add Answer" ng-click="x()" />
-        </label>
-        <label class="createQuestion">
-            <span>&nbsp;</span>
-            <input type="button" value="Create question" ng-click="get()" />
-        </label>
-        <label class="createQuestionnaire">
-            <span>&nbsp;</span>
-            <input type="submit" value="Create questionnaire" />
-        </label>
-    </form>
-</div>
-
-<div class="history">
-    <div class="box">
-        <div class="container-1">
-            <span class="icon"><i class="fa fa-search"></i></span>
-            <input type="search" id="search" placeholder="Type number of questionnaire..." />
+<form class=" btn-create" name="updateForm" novalidate ng-submit="updateForm.$valid && update()">
+    <div class="row">
+        <div class="col-lg-4">
+            <button type="button" ng-click="get()" class="btn-size btn-lg btn-primary">Refresh</button>
+        </div>
+        <div class="col-lg-4">
+            <button ng-click="showDetails = ! showDetails" type="button" class="btn-size btn-lg btn-primary">Toggle inputs</button>
+        </div>
+        <div class="col-lg-4">
+            <button type="submit" class="btn-size btn-lg btn-primary" id="btnCreate">Create</button>
         </div>
     </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Number</th>
-                <th>Name</th>
-                <th>Date&Duration</th>
-                <th>Question</th>
-            </tr>
-        </thead>
-        <tbody class="theadClass">
-        </tbody>
-    </table>
+    <div class="procedure-details" ng-show="showDetails">
+        <div class="row">
+            <div class="col-lg-12">
+                <input ng-model="user.name" type="text" class="form-control ng-dirty ng-valid" placeholder="Questionnaire Name" required></input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <input ng-model="question.name" type="text" data-toggle="collapse" data-target="#answer1" class="form-control inputCollor ng-dirty ng-valid" placeholder="Questions" required></input>
+            </div>
+        </div>
+        <div class="collapse" id="answer1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <input ng-model="answer.name0" type="text" class="ng-dirty ng-valid form-control" placeholder="Answer" required></input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <input ng-model="answer.name1" t type="text" class="ng-dirty ng-valid form-control" placeholder="Answer" required></input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <input ng-model="question.name1" type="text" data-toggle="collapse" data-target="#answer2" class="form-control inputCollor ng-dirty ng-valid" placeholder="Questions" required></input>
+                </div>
+            </div>
+            <div class="collapse" id="answer2">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input ng-model="answer.name2" type="text" class="ng-dirty ng-valid form-control" placeholder="Answer" required></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input ng-model="answer.name3" type="text" class="ng-dirty ng-valid form-control" placeholder="Answer" required></input>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

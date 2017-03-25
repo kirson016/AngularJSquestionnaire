@@ -8,80 +8,19 @@
 </head>
 
 <body>
-    <div id="container">
-        <h1 class="text-center txtlogo">
-<!-- {{ctrl.asd}}
-          {{content.name}}
-    {{ content.date | date:'MM/dd/yyyy @ h:mma'}}
-    {{content.questionnaire.date}} -->
-      </h1>
-
-        <option-buttons></option-buttons>
-
-        <inputs-System ng-show="tab.questionnaire"></inputs-system>
-
-        <table class="searchHide" ng-show="tab.history">
-            <thead>
-                <tr>
-                    <th>Answer number</th>
-                    <th>Answer</th>
-                    <th>Votes</th>
-                    <th>Precent</th>
-            </thead>
-
-            <tbody class="searchResult procedures">
-                <tr ng-click="showDiv($index)" data-toggle="collapse" data-target="#demo">
-                    <td><strong> asdasdasdasda <td><strong> asdasdasdasdasdasd</strong></td>
-                    <td>hahhahaha'</td>
-                    <td ng-show="!hiddenDiv[$index]">asdasdasdas</td>
-                </tr>
-                <tr ng-click="showDiv($index)" id="demo" data-toggle="collapse" class="collapse" data-target="#demoo">
-                    <td><strong> 123123123123 <td><strong> 123123123123123</strong></td>
-                    <td ng-show="!hiddenDiv[$index]">123123123123'</td>
-                    <td>asdasdasdas</td>
-                </tr>
-                <tr ng-click="showDiv($index)" id="demoo" class="collapse">
-                    <div>
-                        <td><strong> asdasdasdasda</a> <td ng-show="!hiddenDiv[$index]"> <strong> asdasdasdasdasdasd</strong></td>
-                        <td>hahhahaha'</td>
-                        <td ng-show="!hiddenDiv[$index]">asdasdasdas</td>
-                    </div>
-                </tr>
-            </tbody>
-        </table>
-        <p></p>
-        <div>
-            <button ng-click="get()" name="asd" type="xxx"></button>
-            <!-- <tr ng-repeat="x in asd">
-            <td> {{x}} </td> <p></p>
-            <td> {{boss.name}} </td><p></p>
-
-        </tr> -->
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p ng-repeat="x in zzz">
-                {{zzz.name}} {{zzz.date}}
-            </p>
-
-
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <inputs-System></inputs-system>
+                <option-Buttons></option-Buttons>
+            </div>
         </div>
-
-
     </div>
 
     <script src="angular/jQuery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="angular/angular.js"></script>
+    <script crc="js/bootbox.min"></script>
     <script src="js/app.js"></script>
 </body>
-
 </html>
